@@ -1,11 +1,16 @@
-To setup on new machine:
+First time setup:
 ```
 git init --bare $HOME/.cfg
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 config config --local status.showUntrackedFiles no
 echo "alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'" >> $HOME/.zshrc
-config add remote origin git@github.com:adizim/dotfiles.git
-config pull origin master
+```
+
+New machine setup:
+```
+git clone --bare git@github.com:adizim/dotfiles.git $HOME/.cfg
+config checkout
+config config --local status.showUntrackedFiles no
 ```
 
 Add and update dotfiles:
