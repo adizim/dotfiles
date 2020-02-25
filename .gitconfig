@@ -1,0 +1,11 @@
+[user]
+	name = Adi Zimmerman
+	email = adizim@lyft.com
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	last = log -1 HEAD
